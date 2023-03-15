@@ -15,8 +15,12 @@
   --fw-heading: 700;
 
   --fs-paragraph: .9375rem;
-  --lh-paragrapgh: 1.5rem;
+  --lh-paragraph: 1.5rem;
   --fw-paragraph: 400;
+
+  --fs-rating: 1rem;
+
+  --border-radius: 1.4063rem;
 }
 
 
@@ -57,18 +61,82 @@ p {
   width: 25.75rem;
   background: radial-gradient(98.96% 98.96% at 50% 0%, hsl(215, 20%, 17%) 0%, hsl(216, 24%, 12%) 100%);
   border-radius: 1.875rem;
+  padding: 2rem;
+}
+
+.rating-container h1 {
+  margin-block: 1.875rem .4375rem;
+}
+
+.rating-form {
+  margin-block-start: 1.5rem;
 }
 
 .rating-buttons {
   display: flex;
   justify-content: space-between;
+  margin-block-end: 2rem;
 }
 
 .round-container {
-  font-size: 1rem;
+  width: 3.1875rem;
+  height: 3.1875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: var(--fs-rating);
   font-weight: var(--fw-heading);
-  line-height: var(--lh-paragrapgh);
   color: var(--light-gray);
   background-color: var(--dark-blue);
+  cursor: pointer;
+}
 
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:hover+label {
+  background-color: var(--medium-gray);
+  color: var(--white);
+}
+
+
+input[type="radio"]:checked+label {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+
+.button {
+  width: 100%;
+  background-color: var(--orange);
+  border-radius: var(--border-radius);
+  border: 0;
+  font-weight: var(--fw-heading);
+  font-size: var(--fs-paragraph);
+  letter-spacing: .125rem;
+  color: var(--white);
+  text-transform: uppercase;
+  padding-block: .6875rem .9375rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: var(--orange);
+  background-color: var(--white);
+}
+
+.thanks-container {
+  text-align: center;
+}
+
+.rating-selected {
+  width: fit-content;
+  border-radius: var(--border-radius);
+  background-color: var(--dark-blue);
+  margin-block: 2rem;
+  margin-inline: auto;
+  padding: .25rem 1.25rem;
+  color: var(--orange);
 }

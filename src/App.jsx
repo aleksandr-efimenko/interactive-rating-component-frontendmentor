@@ -1,12 +1,15 @@
 import { useState } from 'react'
 import Rating from './components/Rating'
+import Thanks from './components/Thanks';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
-      <Rating />
+    <div className="rating-container">
+      {/* <Rating /> */}
+<Thanks rating={count}/>
+
     </div>
   )
 }
