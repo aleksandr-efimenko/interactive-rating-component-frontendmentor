@@ -10,19 +10,41 @@
 
   --ff-primary: 'Overpass', sans-serif;
 
-  --fs-heading: 1.75rem;
-  --lh-heading: 2.2156rem;
+  --fs-heading-d: 1.75rem;
+  --fs-heading-m: 1.5rem;
+  --fs-heading: var(--fs-heading-d);
+  --lh-heading-d: 2.2156rem;
+  --lh-heading-m: 1.875rem;
+  --lh-heading: var(--lh-heading-d);
   --fw-heading: 700;
 
-  --fs-paragraph: .9375rem;
-  --lh-paragraph: 1.5rem;
+  --fs-paragraph-d: .9375rem;
+  --fs-paragraph-m: .875rem;
+  --fs-paragraph: var(--fs-paragraph-d);
+
+  --lh-paragraph-d: 1.5rem;
+  --lh-paragraph-m: 1.375rem;
+  --lh-paragraph: var(--lh-paragraph-d);
   --fw-paragraph: 400;
 
   --fs-rating: 1rem;
 
-  --border-radius: 1.4063rem;
-}
+  --container-padding-d: 2rem;
+  --container-padding-m: 1.5rem 1.5rem 2rem 1.5rem;
+  --container-padding: var(--container-padding-d);
 
+  --container-width-d: 25.75rem;
+  --container-width-m: 20.4375rem;
+  --container-width: var(--container-width-d);
+
+  --border-radius: 1.4063rem;
+
+  --round-container-wh-d: 3.1875rem;
+  --round-container-wh-m: 2.625rem;
+
+  --round-container-wh: var(--round-container-wh-d);
+
+}
 
 /* Box sizing rules */
 /* Remove default margin */
@@ -58,10 +80,10 @@ p {
 }
 
 .rating-container {
-  width: 25.75rem;
+  width: var(--container-width);
   background: radial-gradient(98.96% 98.96% at 50% 0%, hsl(215, 20%, 17%) 0%, hsl(216, 24%, 12%) 100%);
   border-radius: 1.875rem;
-  padding: 2rem;
+  padding: var(--container-padding);
   margin-inline: 1.5rem;
 }
 
@@ -80,8 +102,8 @@ p {
 }
 
 .round-container {
-  width: 3.1875rem;
-  height: 3.1875rem;
+  width: var(--round-container-wh);
+  height: var(--round-container-wh);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,4 +165,43 @@ input[type="radio"]:checked+label {
   margin-inline: auto;
   padding: .25rem 1.25rem;
   color: var(--orange);
+}
+
+
+@media (max-width: 37.5rem) {
+  :root {
+    --fs-heading: var(--fs-heading-m);
+    --lh-heading: var(--lh-heading-m);
+
+    --fs-paragraph: var(--fs-paragraph-m);
+    --lh-paragraph: var(--lh-paragraph-m);
+
+    --fs-rating: var(--fs-paragraph-m);
+
+    --container-padding: var(--container-padding-m);
+    --container-width: var(--container-width-m);
+    --round-container-wh: var(--round-container-wh-m);
+  }
+
+  .rating-container h1 {
+    margin-block: 1rem 1.0625rem
+  }
+
+  .rating-buttons {
+    margin-block-end: 1.5rem;
+  }
+
+  .thanks-container img {
+    margin-block-start: .625rem;
+    width: 9rem;
+    height: 6rem;
+  }
+
+  .rating-selected {
+    margin-block: 1.5rem;
+  }
+
+  .rating-container h1 {
+    margin-block: 1.5rem .625rem;
+  }
 }

@@ -11,10 +11,9 @@ function App() {
 
     const formJson = Object.fromEntries(formData.entries());
     if (!formJson.rating) {
-      console.log("rating is not set");
+      console.warn("Rating is not set, prevent submit");
       return;
     }
-    console.log(formJson);
     setCount(Number(formJson.rating));
   };
 
