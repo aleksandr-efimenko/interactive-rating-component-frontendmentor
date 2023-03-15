@@ -41,9 +41,7 @@
 
   --round-container-wh-d: 3.1875rem;
   --round-container-wh-m: 2.625rem;
-
   --round-container-wh: var(--round-container-wh-d);
-
 }
 
 /* Box sizing rules */

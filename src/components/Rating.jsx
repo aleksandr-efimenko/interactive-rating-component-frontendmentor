@@ -10,7 +10,7 @@ export default function Rating({ handleSubmit }) {
   return (
     <>
       <div className="round-container">
-        <img src="../../images/icon-star.svg" alt="Star icon" />
+        <img src="../images/icon-star.svg" alt="Star icon" />
       </div>
       <h1>How did we do?</h1>
       <p>
