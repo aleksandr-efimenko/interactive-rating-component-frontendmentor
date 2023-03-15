@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ImgSrc from '../images/icon-star.svg';
 
 export default function Rating({ handleSubmit }) {
   const [hover, setHover] = useState(false);
@@ -11,7 +10,7 @@ export default function Rating({ handleSubmit }) {
   return (
     <>
       <div className="round-container">
-        <img src={ImgSrc} alt="Star icon" />
+        <img src='../images/icon-star.svg' alt="Star icon" />
       </div>
       <h1>How did we do?</h1>
       <p>
