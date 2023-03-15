@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ImgSrc from "../../public/images/icon-star.svg";
+import ImgSrc from '/src/images/icon-star.svg';
 
 export default function Rating({ handleSubmit }) {
   const [hover, setHover] = useState(false);

@@ -1,5 +1,5 @@
 import React from "react";
-import ImgSrc from '../../public/images/illustration-thank-you.svg';
+import ImgSrc from '/src/images/illustration-thank-you.svg';
 
 export default function ({rating}) {
   return (
